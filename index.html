@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rocks, Paper, Scissors</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header></header>
+            <main>
+                <p>Make a Decision</p>
+                <section id="choice">
+                    <button id="btn__rock">Rock</button>
+                    <button id="btn__paper">Paper</button>
+                    <button id="btn__scissors">Scissors</button>
+                </section>
+                <section id="res">
+                    <button id="play">Play</button>
+                    <p id="results"></p>
+                    <button id="reset">Reset</button>
+                </section>
+                <section class="score">
+                    <span id="score__player">0</span>
+                    <span>/</span>
+                    <span id="score__computer">0</span>
+                </section>
+            </main>
+            <footer></footer>
+        </div>
+        <script type="module">
+            import { rockPaperScissors } from "./script.js";
+            rockPaperScissors();
+        </script>
+    </body>
+</html>

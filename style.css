@@ -1,0 +1,22 @@
+body {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.score {
+    position: absolute;
+    top: 2rem;
+    right: 2em;
+}
+
+button {
+    margin: 1rem;
+    width: 100px;
+    border-radius: 0.2rem;
+    background: none;
+}
