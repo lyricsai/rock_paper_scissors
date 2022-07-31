@@ -1,10 +1,9 @@
-export function rockPaperScissors() {
+const rockPaperScissors = () => {
     const results = document.querySelector('#results');
     const reset = document.querySelector('#reset');
     const play = document.querySelector('#play');
     const playerScoreNode = document.querySelector('#score__player');
     const computerScoreNode = document.querySelector('#score__computer');
-
     const playerChoices = [...(document.querySelectorAll('section#choice button'))];
 
     let counter = 0;
@@ -25,13 +24,13 @@ export function rockPaperScissors() {
 
     const playRound = (computerSelection, playerChoice) => {
 
-        if(computerSelection === playerChoice) {return results.innerText += ` It's a draw`;}
+        if(computerSelection === playerChoice) {return results.innerText += ' It\'s a draw';}
 
         if((computerSelection === 'Rock' && playerChoice === 'Paper') || (computerSelection === 'Paper' && playerChoice === 'Scissors') || (computerSelection === 'Scissors' && playerChoice === 'Rock')) {
-            results.innerText += ` You won!`;
+            results.innerText += ' You won!';
             playerScore++;
         } else {
-            results.innerText += ` Computer won!`;
+            results.innerText += ' Computer won!';
             computerScore++;
         }
 
@@ -41,7 +40,7 @@ export function rockPaperScissors() {
 
     const comparing = () => {
         if(counter === 5) {
-            results.innerText += `\n You've got ${playerScore}, and computer got ${computerScore}.`;
+            results.innerText += `\n\n You've got ${playerScore}, and computer got ${computerScore}.`;
             if(playerScore > computerScore) return results.innerText += ` Congatulations! You won!`;
             if(playerScore < computerScore) return results.innerText += ` Computer won, another time?`;
             if(playerScore = computerScore) return results.innerText += ` Close run, one more game?`;
@@ -54,7 +53,7 @@ export function rockPaperScissors() {
         let computerSelection = getComputerChoice();
         let playerChoice = getPlayerChoice();
 
-        results.innerText = `Your choice is ${playerChoice} and computer's choice is ${computerSelection}.`;
+        results.innerText = `Round ${counter}. Your choice is ${playerChoice.toUpperCase()} and computer's choice is ${computerSelection.toUpperCase()}.`;
         playRound(computerSelection, playerChoice);
         comparing();
 
@@ -79,4 +78,14 @@ export function rockPaperScissors() {
         computerScoreNode.innerText = 0;
         playerScoreNode.innerText = 0;
     });
-}
+};
+
+rockPaperScissors();
+
+window.onload = () => {
+    "use strict";
+
+    if("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
+    }
+};

@@ -1,0 +1,25 @@
+{
+    "name": "rock-paper-scissors",
+    "version": "1.0.1",
+    "description": "game rock paper scissors",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lyricsai/rock_paper_scissors.git"
+    },
+    "keywords": [
+        "game",
+        "rock",
+        "paper",
+        "scissors"
+    ],
+    "author": "Anastasiya Litvinenka",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lyricsai/rock_paper_scissors/issues"
+    },
+    "homepage": "https://github.com/lyricsai/rock_paper_scissors#readme"
+}

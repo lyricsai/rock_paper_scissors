@@ -4,22 +4,86 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rocks, Paper, Scissors</title>
+        <title>Rock, Paper, Scissors</title>
         <link rel="stylesheet" href="./style.css" />
+        <link rel="manifest" href="./manifest.json" />
+        <link
+            rel="apple-touch-icon"
+            href="./assets/assets/rock-paper-scissors.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon-16x16.png"
+        />
+        <link
+            rel="mask-icon"
+            href="./assets/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+            name="description"
+            content="A game of rock, paper and scissors agains computer. Take your time and win the game"
+        />
+        <meta name="keywords" content="rock paper scissors, game, play" />
     </head>
     <body>
         <div class="wrapper">
-            <header></header>
+            <header>
+                <h1>Rock, Paper, Scissors</h1>
+            </header>
             <main>
-                <p>Make a Decision</p>
+                <section id="instructions">
+                    <p>
+                        Here is a game of 5 rounds against a computer. <br />
+                        Make your choice and press the Play button for each
+                        round.
+                        <br />
+                        Good Luck!
+                    </p>
+                </section>
                 <section id="choice">
-                    <button id="btn__rock">Rock</button>
-                    <button id="btn__paper">Paper</button>
-                    <button id="btn__scissors">Scissors</button>
+                    <h2>Make a Decision</h2>
+                    <button id="btn__rock" class="btn__choice">
+                        <img
+                            src="./assets/icons8-rock-hand-100.png"
+                            alt="rock"
+                        /><span>Rock</span>
+                    </button>
+                    <button id="btn__paper" class="btn__choice">
+                        <img
+                            src="./assets/icons8-paper-hand-100.png"
+                            alt="paper"
+                        /><span>Paper</span>
+                    </button>
+                    <button id="btn__scissors" class="btn__choice">
+                        <img
+                            src="./assets/icons8-scissors-hand-100.png"
+                            alt="scissors"
+                        /><span>Scissors</span>
+                    </button>
                 </section>
                 <section id="res">
                     <button id="play">Play</button>
-                    <p id="results"></p>
+                    <p id="results" class="results"></p>
                     <button id="reset">Reset</button>
                 </section>
                 <section class="score">
@@ -28,11 +92,10 @@
                     <span id="score__computer">0</span>
                 </section>
             </main>
-            <footer></footer>
+            <footer>
+                <p>Part of Odin Project by Anastasiya Litvinenka</p>
+            </footer>
         </div>
-        <script type="module">
-            import { rockPaperScissors } from "./script.js";
-            rockPaperScissors();
-        </script>
+        <script defer src="./script.js"></script>
     </body>
 </html>
